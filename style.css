@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gilroy';
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/img/1img.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.4s ease-in-out;
+}
+
+.content-box {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 96vw;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.heart-animation {
+    position: absolute;
+    top: 65%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/001/187/492/non_2x/heart-png.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: heartFade 2s infinite;
+    pointer-events: none;
+}
+
+.btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 25px;
+    padding: 0.2rem 0.3rem;
+    cursor: pointer;
+}
+
+.btn:active {
+    background-color: rgba(51, 49, 49, 0.286);
+    
+    border-radius: 20%;
+
+}
+
+@keyframes heartFade {
+    0% { opacity: 0; transform: translateY(0); }
+    25% { opacity: 1; transform: translateY(-10px); }
+    50% { opacity: 0; transform: translateY(0); }
+    75% { opacity: 1; transform: translateY(-10px); }
+    100% { opacity: 0; transform: translateY(0); }
+}
